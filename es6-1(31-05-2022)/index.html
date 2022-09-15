@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            display: grid;
+            grid-template-columns: repeat(5,20%);
+            grid-gap: 1%;
+        }
+        #navbar{
+            display: flex;
+            height: 52px;
+            width: 100%;
+            border: 1px solid;
+           
+        }
+        #menu{
+            height: 80%;
+            width: 3%;
+            margin-top: 3px;
+            border: 0px solid;
+        }
+        #ytubelogo{
+            height: 90%;
+            width: 5%;
+            margin-left: 4%;
+            margin-top: 1px;
+        }
+        #query{
+            margin-left: 10%;
+            height: 90%;
+            width: 80%;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        #searchdiv{
+            margin-left: 10%;
+            margin-top: 7px;
+            height: 60%;
+            width: 40%;
+            border-radius: 10px;
+            font-size: 20px;
+            display: flex;
+        }
+        #searchlogo{
+            border-radius: 5px;
+            background-color: rgb(241, 232, 232);
+
+        }
+        #videologo{
+            margin-left: 25%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+        }
+        #gridlogo{
+            margin-left: 25%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+        }
+        #notilogo{
+            margin-left: 1%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+
+        }
+        #maillogo{
+            margin-left: 2%;
+            height: 60%;
+            width: 2.5%;
+            margin-top: 13px;
+          border-radius: 50%;
+
+        }
+        #bodypart{
+            display: flex;
+            margin-top: 1%;
+           
+        }
+        #sidebar{
+            border:1px ;
+            width: 13%;
+            height: 650px;
+            background-color:whitesmoke;
+        
+        }
+        .sidebox{
+            display: flex;
+            border: 1px ;
+            height: 30px;
+            width: 90%;
+            margin-left: 2%;
+            margin-top: 7%;
+          border-radius: 5px;
+        }
+        .sideimage{
+             margin-left: 8%;
+             height: 100%;
+        }
+        .sidetext{
+            font-size: 18px;
+          margin-left: 15%;
+          margin-top: 2%;
+        }
+        hr{
+            margin-top: 5%;
+        }
+        .sidebox:hover{
+            background-color: white
+        }
+        #result{
+         border: 1px ;
+         width: 85%;
+         margin-left: 2%;
+        
+         
+        }
+        #menu:hover{
+            background-color: whitesmoke;
+        }
+        #insidebox{
+            border: 1px solid;
+            width: 75%;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+        }
+        #insidebox:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <img id="menu" src="https://user-images.githubusercontent.com/101376689/190367521-6bcb7303-e316-49f4-8256-e72abb13bcf0.png">
+        <img id="ytubelogo" src="https://cdn-icons-png.flaticon.com/128/187/187210.png">
+        <div id="searchdiv">
+            <input type="text" id="query">
+            
+         <button onclick="search()" id="searchlogo">Search</button>
+        </div>
+      
+        <img id="gridlogo" src="https://cdn-icons-png.flaticon.com/128/3603/3603178.png">
+        <img id="notilogo" src="https://cdn-icons-png.flaticon.com/128/3602/3602123.png">
+        <img  id="maillogo" src="https://user-images.githubusercontent.com/101376689/190377698-4d2a668e-345b-455b-a23e-3e71c06b0dee.png">
+    </div>
+    <div id="bodypart">
+        <div id="sidebar">
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/846/846551.png">
+                <p class="sidetext">Home</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/77/77521.png">
+                <p class="sidetext">Explore</p>
+            </div >
+            <div class="sidebox">
+                <img class="sideimage" src="https://user-images.githubusercontent.com/101376689/190366754-8e147449-b783-42fd-99de-d6f6b88b1825.jpg">
+                <p class="sidetext">Shorts</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://user-images.githubusercontent.com/101376689/190368534-e24ae262-fe9f-41f4-a317-ef36963408b1.jpg">
+                <p class="sidetext">History</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://user-images.githubusercontent.com/101376689/190376644-0df34a50-7b6f-4432-840c-f6d22ef36db4.gif">
+                <p class="sidetext">Subscription</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://user-images.githubusercontent.com/101376689/190376909-8ecb4bd4-ebeb-431f-a4d8-4a824b83d1ad.png">
+                <p class="sidetext">Library</p>
+            </div>
+            <hr>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/857/857492.png">
+                <p class="sidetext">Sports</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://user-images.githubusercontent.com/101376689/190377347-3a0f5aa6-81c1-4959-9c2c-ff545965526b.jpg">
+                <p class="sidetext">Live</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/633/633600.png">
+                <p class="sidetext">Movies</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/13/13973.png">
+                <p class="sidetext">Gaming</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/4185/4185218.png">
+                <p class="sidetext">Learning</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/1051/1051009.png">
+                <p class="sidetext">Fashion</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/3524/3524659.png">
+                <p class="sidetext">Setting</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/18/18436.png">
+                <p class="sidetext">Help</p>
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+   
+    
+</body>
+</html>
+<script>
+    const key="AIzaSyDlQl36KA6V7ZORnPuYA3CuNI8qC6q2TRg"
+
+    //youtube:- all the data store at youtube -- 
+    //we need the url and and fetch - fectch will give the promise 
+
+    var urlkey= `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&q=hindi&key=${key}`
+    let edata = async() =>{
+        var res1= await fetch(urlkey)
+        var user1= await res1.json()
+        append(user1.items)
+    }
+edata()
+let search= async() =>{
+    try{
+        let query=document.getElementById("query").value
+        var url= `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${key}`
+        var res= await fetch(url)
+        var user =await res.json()
+
+        console.log(user.items)
+        append(user.items)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+let append= (data) =>{
+    let cont=document.getElementById("result");
+    document.getElementById("result").innerHTML=null
+     
+    data.forEach (({id:{videoId},snippet:{thumbnails,title}}) =>{
+    
+     
+    let div=document.createElement("div")
+    div.setAttribute("id","insidebox")
+
+    let img=document.createElement("img")
+    img.src=thumbnails.default.url
+    img.style.width="100%"
+
+    //  let iframe=document.createElement("iframe");
+    //  iframe.src=`https://www.youtube.com/embed/${videoId}`;
+
+     
+     let h3=document.createElement("h5");
+     h3.innerText=title;
+     h3.style.lineHeight="25px"
+     h3.style.textAlign="center"
+
+
+     let obj={
+         title,
+         videoId,
+         thumbnails
+     }
+    div.onclick=() =>{
+        myfunc(obj)
+    }
+
+  div.append(img,h3);
+
+   cont.append(div)
+    })
+    
+
+}
+
+function myfunc(n){
+    console.log(n)
+    localStorage.setItem("data",JSON.stringify(n))
+    window.location.href="thubnail.html"
+}
+
+
+
+
+/*
+<iframe width="560" height="315"
+ src="https://www.youtube.com/embed/2tq1IxE8o1Q"   //vedio id
+title="YouTube video player" 
+frameborder="0" allow="accelerometer;
+ autoplay; clipboard-write; encrypted-media; 
+ gyroscope; picture-in-picture" 
+ allowfullscreen>
+    /iframe>
+    */
+
+
+
+    
+   
+</script>

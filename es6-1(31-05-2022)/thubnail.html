@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #navbar{
+            display: flex;
+            height: 50px;
+            width: 100%;
+            border: 1px solid;
+           
+        }
+        #menu{
+            height: 80%;
+            width: 3%;
+            margin-top: 3px;
+            border: 1px solid;
+        }
+        #ytubelogo{
+            height: 90%;
+            width: 5%;
+            margin-left: 4%;
+            margin-top: 1px;
+        }
+        #query{
+            margin-left: 10%;
+            height: 90%;
+            width: 80%;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        #searchdiv{
+            margin-left: 10%;
+            margin-top: 7px;
+            height: 60%;
+            width: 40%;
+            border-radius: 10px;
+            font-size: 20px;
+            display: flex;
+        }
+        #searchlogo{
+            border-radius: 5px;
+            background-color: rgb(241, 232, 232);
+
+        }
+        #videologo{
+            margin-left: 25%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+        }
+        #gridlogo{
+            margin-left: 2%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+        }
+        #notilogo{
+            margin-left: 2%;
+            height: 50%;
+            width: 2%;
+            margin-top: 13px;
+
+        }
+        #maillogo{
+            margin-left: 2%;
+            height: 60%;
+            width: 2.5%;
+            margin-top: 13px;
+          border-radius: 50%;
+
+        }
+        #bodypart{
+            display: flex;
+            margin-top: 1%;
+           
+        }
+        #sidebar{
+            border:1px ;
+            width: 13%;
+            height: 650px;
+            background-color:whitesmoke;
+        
+        }
+        .sidebox{
+            display: flex;
+            border: 1px ;
+            height: 30px;
+            width: 90%;
+            margin-left: 2%;
+            margin-top: 7%;
+          border-radius: 5px;
+        }
+        .sideimage{
+             margin-left: 8%;
+             height: 100%;
+        }
+        .sidetext{
+            font-size: 18px;
+          margin-left: 15%;
+          margin-top: 2%;
+        }
+        hr{
+            margin-top: 5%;
+        }
+        .sidebox:hover{
+            background-color: white
+        }
+        #result{
+         border: 1px ;
+         width: 85%;
+         margin-left: 2%;
+        
+         
+        }
+        #menu:hover{
+            background-color: whitesmoke;
+        }
+        #inside{
+            margin-top: 10%;
+            border: 1px solid;
+            height: 400px;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+        #iframe{
+            border-radius: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <img id="menu" src="https://cdn-icons.flaticon.com/png/128/2989/premium/2989840.png?token=exp=1654021773~hmac=02a83fac8dbb5c79f148fc23fd022078">
+        <img id="ytubelogo" src="https://cdn-icons-png.flaticon.com/128/187/187210.png">
+        <div id="searchdiv">
+            <input type="text" id="query">
+            
+         <button onclick="search()" id="searchlogo">Search</button>
+        </div>
+      
+        <img id="videologo" src="https://cdn-icons.flaticon.com/png/128/1517/premium/1517244.png?token=exp=1654016971~hmac=4ea5246ce50b551587b57cfaad764836">
+        <img id="gridlogo" src="https://cdn-icons-png.flaticon.com/128/3603/3603178.png">
+        <img id="notilogo" src="https://cdn-icons-png.flaticon.com/128/3602/3602123.png">
+        <img  id="maillogo" src="https://media-exp1.licdn.com/dms/image/C5603AQFnuGBzwx4Pbw/profile-displayphoto-shrink_400_400/0/1611632966440?e=1659571200&v=beta&t=lEdWCryS-w3PAbGXeG9NVjGBpZIk4bywQrZ0ayQg39I">
+    </div>
+    <div id="bodypart">
+        <div id="sidebar">
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/846/846551.png">
+                <p class="sidetext">Home</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/77/77521.png">
+                <p class="sidetext">Explore</p>
+            </div >
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons.flaticon.com/png/128/665/premium/665232.png?token=exp=1654019708~hmac=511a1cf18656dba552fd34976198a697">
+                <p class="sidetext">Shorts</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons.flaticon.com/png/128/2961/premium/2961948.png?token=exp=1654019773~hmac=1eff26e75cc8829ab54dcb6d4f1a23e8">
+                <p class="sidetext">History</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons.flaticon.com/png/128/2989/premium/2989849.png?token=exp=1654019799~hmac=af6219e2014de64d8b0ccd228ce2ee4b">
+                <p class="sidetext">Subscription</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons.flaticon.com/png/128/4423/premium/4423497.png?token=exp=1654019859~hmac=90f1052b714c63db7b5c151b1afb0e40">
+                <p class="sidetext">Library</p>
+            </div>
+            <hr>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/857/857492.png">
+                <p class="sidetext">Sports</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons.flaticon.com/png/128/2330/premium/2330100.png?token=exp=1654020463~hmac=49fd0d9acc3a5a350b5028c32255b049">
+                <p class="sidetext">Live</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/633/633600.png">
+                <p class="sidetext">Movies</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/13/13973.png">
+                <p class="sidetext">Gaming</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/4185/4185218.png">
+                <p class="sidetext">Learning</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/1051/1051009.png">
+                <p class="sidetext">Fashion</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/3524/3524659.png">
+                <p class="sidetext">Setting</p>
+            </div>
+            <div class="sidebox">
+                <img class="sideimage" src="https://cdn-icons-png.flaticon.com/128/18/18436.png">
+                <p class="sidetext">Help</p>
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+   
+    
+</body>
+</html>
+<script>
+    var vinfo= JSON.parse(localStorage.getItem("data"))
+console.log(vinfo)
+    let play = (vinfo) => {
+      var div=document.createElement("div")
+      div.setAttribute("id","inside")
+
+      var iframe=document.createElement("iframe")
+      iframe.src=`https://www.youtube.com/embed/${vinfo.videoId}`
+      iframe.height="100%"
+      iframe.width="100%"
+      iframe.setAttribute("id","iframe")
+
+      var h3=document.createElement("h3")
+      h3.innerText=vinfo.title
+
+      div.append(iframe,h3)
+
+      document.getElementById("result").append(div)
+    }
+    play(vinfo)
+</script>
